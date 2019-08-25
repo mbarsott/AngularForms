@@ -1,0 +1,106 @@
+<div class="container">
+  <h2>User Settings</h2>
+  <form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        id="name"
+        name="name"
+        class="form-control"
+        placeholder="Name"
+        type="text"
+      />
+    </div>
+
+    <div class="form-check form-group">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="emailOffers"
+        name="emailOffers"
+      />
+      <label for="emailOffers" class="form-check-label"
+        >Email Special Offers</label
+      >
+    </div>
+
+    <p>User Interface Style</p>
+    <div class="form-group">
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          name="interfaceStyle"
+          id="lightInterface"
+          value="light"
+        />
+        <label for="lightInterface" class="form-check-label">Light</label>
+      </div>
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          name="interfaceStyle"
+          id="lightInterface"
+          value="medium"
+        />
+        <label for="mediumInterface" class="form-check-label">Medium</label>
+      </div>
+      <div class="form-check">
+        <input
+          type="radio"
+          class="form-check-input"
+          name="interfaceStyle"
+          id="lightInterface"
+          value="dark"
+        />
+        <label for="darkInterface" class="form-check-label">Dark</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="subscriptionType">Subscription Type</label>
+      <select
+        name="subscriptionType"
+        id="subscriptionType"
+        class="form-control"
+      >
+        <option value="Monthly">Monthly</option>
+        <option value="Annual">Annual</option>
+        <option value="Lifetime">Lifetime</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="notes">Notes</label
+      ><textarea
+        name="notes"
+        id="notes"
+        cols="30"
+        rows="3"
+        class="form-control"
+      ></textarea>
+    </div>
+
+    <!-- 
+    <div class="form-group">
+      <label for="password">Password</label
+      ><input
+        type="password"
+        id="password"
+        name="password"
+        class="form-control"
+      />
+    </div>
+    <div class="form-group">
+      <label for="testing">Testing</label
+      ><input type="color" id="testing" name="testing" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="testing">Testing</label
+      ><input type="date" id="testing" name="testing" class="form-control" />
+    </div> -->
+
+    <button class="btn btn-primary">Send</button>
+  </form>
+</div>

@@ -19,15 +19,20 @@ export class UserSettingsFormComponent implements OnInit {
     notes: null
   };
 
+  userRating: number = 5;
+  maxRating: number = 5;
+  startDate: Date;
+  startTime: Date;
+  singleModel = "On";
   userSettings: UserSettings = { ...this.originalUserSettings };
   postError = false;
   postErrorMessage = "";
-  // subscriptionTypes = ["one", "two", "three"];
   subscriptionTypes: Observable<string[]>;
 
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
+    this.startTime = this.startDate = new Date();
     this.subscriptionTypes = this.dataService.getSubscriptionTypes();
   }
 
@@ -42,19 +47,19 @@ export class UserSettingsFormComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    console.log("in onSubmit: ", form.valid);
+    console.log("in onSubmit: ", form.value);
 
-    if (form.valid) {
-      this.postError = false;
-      this.dataService
-        .postUserSettingsForm(this.userSettings)
-        .subscribe(
-          result => console.log("success: ", result),
-          error => this.onHttpError(error)
-        );
-    } else {
-      this.postError = true;
-      this.postErrorMessage = "Please fix the above errors";
-    }
+    // if (form.valid) {
+    //   this.postError = false;
+    //   this.dataService
+    //     .postUserSettingsForm(this.userSettings)
+    //     .subscribe(
+    //       result => console.log("success: ", result),
+    //       error => this.onHttpError(error)
+    //     );
+    // } else {
+    //   this.postError = true;
+    //   this.postErrorMessage = "Please fix the above errors";
+    // }
   }
 }
